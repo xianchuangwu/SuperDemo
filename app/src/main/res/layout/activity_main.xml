@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chad.superdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.chad.superdemo.ShaderView
+            android:id="@+id/shader"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#000"
+            android:onClick="shader" />
+
+        <com.chad.superdemo.NewVideoNotificationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#123"
+            android:onClick="notification" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewDrag"
+            android:text="ViewDragHelper"
+            android:textAllCaps="false" />
+
+        <com.chad.superdemo.VideoRecoderButton
+            android:id="@+id/recoder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="start" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/clip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/blur_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:onClick="blur"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_outline" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
